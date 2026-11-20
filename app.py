@@ -28,8 +28,7 @@ passenger_count = st.number_input(
     "passenger_count", min_value=0, value=3750, step=10
 )
 
-
-url = "http://localhost:8000/predict"
+url = st.secrets['API_URL']
 
 if st.button("Predict Fare"):
   params = {
